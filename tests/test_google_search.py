@@ -10,4 +10,4 @@ def test_success(setting_browser):
 def test_find_nothing(setting_browser):
     browser.open('/')
     browser.element('[name="q"]').should(be.blank).type('d*gfbnjg3').press_enter()
-    browser.element('[id="botstuff"]').should(have.text('ничего не найдено'))
+    browser.element('.card-section [role="heading"]').should(have.text('ничего не найдено'))
